@@ -1,14 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *  main - prints the absolute value
+ *  _abs - prints the absolute value
+ *  @a: number
  *  Return: return 0 if successful
  */
 
-int _abs(int)
+int _abs(int a)
 {
-	int a;
-
 	if (a < 0)
 	{
 		return (a * -1);

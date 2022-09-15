@@ -1,12 +1,13 @@
 #include "main.h"
 /**
- * main - print alphabets in lowercase
- * Return: return 0 ifsuccessful
+ * _islower - print alphabets in lowercase
+ * @c: prints alphabets
+ * Return: return 0 if successful
  */
 
 int _islower(int c)
 {
-	if (c = 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
 		return (1);
 	}

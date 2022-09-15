@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - prints the time
+ * jack_bauer - prints the time
  * Return: return 0 if successful
  */
 

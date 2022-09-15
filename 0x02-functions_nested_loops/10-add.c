@@ -1,7 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main - print the addition on two numbers
+ * add - print the addition on two numbers
+ * @x: number1
+ * @y: number2
  * Return: return 0 if successful
  */
 
