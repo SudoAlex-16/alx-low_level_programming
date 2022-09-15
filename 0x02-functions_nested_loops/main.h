@@ -9,7 +9,7 @@ int _isalpha(int c);
 int print_sign(int n);
 int _abs(int a);
 int print_last_digit(int n);
-int jack_bauer(void);
+void jack_bauer(void);
 void time_table(void);
 int  add(int x, int y);
 void print_to_98(int n);
