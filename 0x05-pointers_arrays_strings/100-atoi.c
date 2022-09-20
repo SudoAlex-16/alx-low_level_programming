@@ -7,55 +7,26 @@
 
 int _atoi(char *s)
 {
-	unsigned int result;
-	int i, j, neg;
+	int sign = 1;
+	unsigned int num = 0;
 
-	neg = 0;
-	result = 0;
-	j = -1;
-	for (i = 0; str[i] != '\0'; ++i)
-	{
-		if (str[i] == '-')
+	do {
+		if (*s == '-')
 		{
-			if (neg == 0)
-				neg = 1;
-			else
-				neg = 0;
+			sign *= -1;
 		}
-		else if (str[i] >= '0' && str[i] <= '9')
+		else if (*s >= '0' && *s <= '9')
 		{
-			for (j = i; str[j] != '\0'; ++j)
-			{
-				if (!(str[j] >= '0' && str[j] <= '9'))
-					break;
-			}
-			--j;
+			num = (num * 10) + (*s - '0');
+		}
+		else if (num > 0)
+		{
 			break;
 		}
 	}
-	for (; i <= j; ++i)
-		result += (str[i] - '0') * _pow(10, (j - i));
-	if (result != 0 && neg == 1)
-		result = -result;
-	return (result);
-}
-
-/**
- * _pow - compute the power a base to its exponent
- * @base: the base
- * @exp: the exponent
- * Return: the result integer
- */
-
-int _pow(int base, int exp)
-{
-	int result;
-
-	result = 1;
-	while (exp >= 1)
+	while
 	{
-		result *= base;
-		exp--;
+		*s++;
 	}
-	return (result);
+	return (num * sign);
 }
